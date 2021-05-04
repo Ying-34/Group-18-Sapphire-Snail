@@ -11,7 +11,7 @@ const Login = () => {
 
   const onFinish = values => {
     console.log('values', values)
-    // router jump
+    // Route jump
     history.replace('/')
     // To login
   }

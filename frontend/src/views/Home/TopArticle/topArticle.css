@@ -1,0 +1,45 @@
+.top-articles {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.top-articles .title {
+  text-align: center;
+  font-size: 24px;
+  margin: 40px 0;
+}
+
+.top-articles .articles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.articles .article {
+  width: 30%;
+}
+
+.article .article-title {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.article .article-content-title {
+  line-height: 150%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  padding: 20px 0;
+}
+
+.article .article-content {
+  line-height: 150%;
+  color: #666;
+}
+
+.article .read-more {
+  color: #ff9933;
+  padding-top: 16px;
+  cursor: pointer;
+}

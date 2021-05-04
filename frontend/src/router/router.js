@@ -3,7 +3,7 @@ import Home from '../views/Home/Home'
 import Login from '../views/Login/Login'
 import CreateAccount from '../views/CreateAccount/CreateAccount'
 
-// router components
+// router components //
 const Router = () => {
   return (
     <BrowserRouter>
