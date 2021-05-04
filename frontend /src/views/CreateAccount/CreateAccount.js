@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 import './createAccount.css'
 
 const CreateAccount = () => {
-  // use antd's form
+  // use antd form
   const [form] = Form.useForm()
   const history = useHistory()
 

@@ -5,13 +5,13 @@ import { Link, useHistory } from 'react-router-dom'
 import './login.css'
 
 const Login = () => {
-  // use antd's form
+  // use antd form
   const [form] = Form.useForm()
   const history = useHistory()
 
   const onFinish = values => {
     console.log('values', values)
-    // router jump
+    // Route jump
     history.replace('/')
     // To login
   }

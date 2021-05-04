@@ -5,7 +5,7 @@ import './assets/css/common.css'
 
 function App() {
   return (
-    <div className='App'>
+    <div className='app'>
       <Router />
     </div>
   )
