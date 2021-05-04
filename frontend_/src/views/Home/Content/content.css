@@ -1,0 +1,23 @@
+.img-box-one,
+.img-box-two {
+  background-position: bottom;
+  height: 550px;
+  color: #fff;
+  font-size: 24px;
+  position: relative;
+}
+
+.introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.img-box-one {
+  background: url('../../../assets/imgs/home-img1.jpg')
+}
+
+.img-box-two {
+  background: url('../../../assets/imgs/home-img2.jpg')
+
+}
