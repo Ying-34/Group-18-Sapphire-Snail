@@ -1,0 +1,85 @@
+.home-content {
+}
+
+.logo-container {
+  height: 110px;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+
+.logo-title {
+  margin-left: 8px;
+}
+
+.logo-scale {
+  height: 70px;
+  transition: all 0.4s ease-in-out;
+  font-size: 28px;
+}
+
+.link-container {
+  font-size: 18px;
+  margin-top: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.link-container .link {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.link:not(:first-child) {
+  padding-left: 40px;
+}
+
+.link:hover {
+  color: #1976d2;
+}
+
+.logo-img {
+  max-width: 100%;
+  max-height: 54%;
+}
+
+.banner {
+  background-image: url(https://www.kiwix.org/wp-content/uploads/StockSnap_8GKUZYXZO3.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  height: 690px;
+  overflow: hidden;
+  border-top: 1px solid #d8d8da;
+  color: #ff9933;
+  text-align: center;
+}
+
+.intro-wrapper {
+  font-weight: 800;
+  font-size: 56px;
+  width: 80%;
+  line-height: 140%;
+  max-width: 800px;
+}
+
+.intro-desc {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 140%;
+  max-width: 800px;
+  margin-top: 40px;
+}
+
+.intro-wrapper .search-input {
+  height: 46px;
+}
+
+.intro-wrapper .search-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
