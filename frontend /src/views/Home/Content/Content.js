@@ -22,11 +22,11 @@ const Content = () => {
   }, [getScrollTop])
 
   useEffect(() => {
-    // Add event monitoring
+    // add event listening
     document.addEventListener('scroll', scroll)
 
     return () => {
-      // Remove event listening
+      // remove event listening
       document.removeEventListener('scroll', scroll)
     }
   }, [scroll])
@@ -43,10 +43,10 @@ const Content = () => {
           <Link to='/about-us' className='link'>
             About us
           </Link>
-          <Link to='/qusetion-answer' className='link'>
+          <Link to='/question-answer' className='link'>
             Q & A
           </Link>
-          <Link to='/contact' className='link'>
+          <Link to='/contact-us' className='link'>
             Contact
           </Link>
         </div>

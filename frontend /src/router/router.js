@@ -2,17 +2,23 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from '../views/Home/Home'
 import Login from '../views/Login/Login'
 import CreateAccount from '../views/CreateAccount/CreateAccount'
+import AboutUs from '../views/AboutUs/AboutUs'
+import ContactUs from '../views/ContactUs/ContactUs'
+import QuestionAndAnswer from '../views/QuestionAndAnswer/QuestionAndAnswer'
 
-//Thin are router components //
+// here are router assembly
 const Router = () => {
   return (
     <BrowserRouter>
-      {/* currently only match one router */}
+      {/* Currently, only one route is matched */}
       <Switch>
-        {/* match exactly */}
+        {/* exact Precise matching */}
         <Route exact path='/' component={Home} />
         <Route path='/login' component={Login} />
         <Route path='/create-account' component={CreateAccount} />
+        <Route path='/about-us' component={AboutUs} />
+        <Route path='/contact-us' component={ContactUs} />
+        <Route path='/question-answer' component={QuestionAndAnswer} />
       </Switch>
     </BrowserRouter>
   )

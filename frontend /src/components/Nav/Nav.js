@@ -6,8 +6,8 @@ import './nav.css'
 
 const Nav = () => {
   /**
-   * the value that props pass for parent components
-   * If parent components don't transfer title, it default shows 'Sapphire-Snail'
+   * Props is the value passed by the parent component
+   * If the parent component does not transfer the title, it will be displayed as "Sapphire snail" by default
    */
 
   const [val, setVal] = useState('')
