@@ -1,59 +1,31 @@
-import { useEffect, useCallback, useState } from 'react'
-import { Link } from 'react-router-dom'
-import Banner from '../Banner/Banner'
-import TopArticle from '../TopArticle/TopArticle'
-import snipaste from '../../../assets/imgs/snipaste.png'
+import { Carousel } from 'antd'
 import './content.css'
 
+const style = {
+  position: 'absolute',
+  left: '40%',
+  top: '45%'
+}
+
 const Content = () => {
-  const [scale, setScale] = useState(false)
-
-  const getScrollTop = useCallback(() => {
-    return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
-  }, [])
-
-  const scroll = useCallback(() => {
-    const scrollTop = getScrollTop()
-    if (scrollTop > 30) {
-      setScale(true)
-      return
-    }
-    setScale(false)
-  }, [getScrollTop])
-
-  useEffect(() => {
-    // Add event monitoring
-    document.addEventListener('scroll', scroll)
-
-    return () => {
-      // Remove event listening
-      document.removeEventListener('scroll', scroll)
-    }
-  }, [scroll])
+  const handleClick = () => {}
 
   return (
     <div className='home-content'>
-      <div className='header-container'>
-        <div className={`logo-container ${scale ? 'logo-scale' : ''}`}>
-          <img className='logo-img' alt='logo' src={snipaste} />
-          <span className='logo-title'>Sapphire Snail</span>
+      <Carousel autoplay>
+        <div onClick={handleClick} className='img-box-one'>
+          <div style={style}>
+            <div>Are you ready?</div>
+            <div>Start exploring your Wikipedia forum</div>
+          </div>
         </div>
-
-        <div className='link-container flex-c'>
-          <Link to='/about-us' className='link'>
-            About us
-          </Link>
-          <Link to='/qusetion-answer' className='link'>
-            Q & A
-          </Link>
-          <Link to='/contact' className='link'>
-            Contact
-          </Link>
+        <div className='img-box-two'>
+          <div style={style}>
+            <div>Are you ready?</div>
+            <div>Start exploring your Wikipedia forum</div>
+          </div>
         </div>
-      </div>
-
-      <Banner />
-      <TopArticle />
+      </Carousel>
     </div>
   )
 }

@@ -1,6 +1,9 @@
-/* Common styles */
 
-.flex {
+
+/* common style */
+
+.flex{
+
   display: flex;
 }
 

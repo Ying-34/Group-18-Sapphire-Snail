@@ -11,7 +11,11 @@ const Login = () => {
 
   const onFinish = values => {
     console.log('values', values)
+<<<<<<< HEAD:frontend_/src/views/Login/Login.js
     // Route jump
+=======
+    // router jump
+>>>>>>> main:frontend/frontend/src/views/Login/Login.js
     history.replace('/')
     // To login
   }
