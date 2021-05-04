@@ -42,7 +42,7 @@
 }
 
 .banner {
-  background-image: url(https://www.kiwix.org/wp-content/uploads/StockSnap_8GKUZYXZO3.jpg);
+  background-image: url("https://media3.giphy.com/media/l3q2F9IiX4G1oEOn6/200w.webp?cid=ecf05e47apn436buvzekdafh9a7o7cwwnazn9xue30sda15f&rid=200w.webp&ct=g");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -52,7 +52,7 @@
   height: 690px;
   overflow: hidden;
   border-top: 1px solid #d8d8da;
-  color: #ff9933;
+  color: skyblue;
   text-align: center;
 }
 

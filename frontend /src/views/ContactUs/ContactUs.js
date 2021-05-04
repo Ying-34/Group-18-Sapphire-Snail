@@ -1,5 +1,8 @@
 import Nav from '../../components/Nav/Nav'
-import snipaste from '../../assets/imgs/snipaste.png'
+import Snail1 from '../../assets/imgs/Snail1.jpeg'
+import Snail3 from '../../assets/imgs/Snail3.jpeg'
+import Snail4 from '../../assets/imgs/Snail4.jpeg'
+import Snail5 from '../../assets/imgs/Snail5.jpeg'
 import './contactUs.css'
 
 const ContactUs = () => {
@@ -8,10 +11,10 @@ const ContactUs = () => {
       <Nav />
       <ul className='contact-us'>
         <li className='contact-li intro'>
-          If you have any questions, please contact us. Thank you
+          If you have any questions, please contact us. Thank you!
         </li>
         <li className='contact-li'>
-          <img className='avatar-img' src={snipaste} alt='' />
+          <img className='avatar-img1' src={Snail1} alt='' />
           <div className='right'>
             <div className='information'>
               <span className='weak'> Name：</span>
@@ -29,7 +32,7 @@ const ContactUs = () => {
         </li>
 
         <li className='contact-li'>
-          <img className='avatar-img' src={snipaste} alt='' />
+          <img className='avatar-img5' src={Snail5} alt='' />
           <div className='right'>
             <div className='information'>
               <span className='weak'> Name：</span>
@@ -47,7 +50,7 @@ const ContactUs = () => {
         </li>
 
         <li className='contact-li'>
-          <img className='avatar-img' src={snipaste} alt='' />
+          <img className='avatar-img3' src={Snail3} alt='' />
           <div className='right'>
             <div className='information'>
               <span className='weak'>Name：</span>
@@ -63,7 +66,7 @@ const ContactUs = () => {
         </li>
 
         <li className='contact-li'>
-          <img className='avatar-img' src={snipaste} alt='' />
+          <img className='avatar-img4' src={Snail4} alt='' />
           <div className='right'>
             <div className='information'>
               <span className='weak'>Name：</span>Winona
