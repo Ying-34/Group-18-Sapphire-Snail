@@ -6,16 +6,20 @@
   color: #fff;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
 }
 
-.logo {
+.logo{
   color: #fff;
 }
 
 .login-btn {
   color: #fff;
   margin-left: 20px;
+}
+
+#divL{
+  visibility: hidden;
+  z-index: 30;
+  border: thin solid skyblue;
+  background: rgba(255, 255,255,1);
 }

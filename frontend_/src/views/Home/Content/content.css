@@ -84,3 +84,39 @@
   font-size: 30px;
   cursor: pointer;
 }
+
+/*chloe*/
+
+ul{
+  line-height: 10px;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10;
+  list-style: none;
+  background: rgba(255, 255,255,1)
+}
+
+li{
+  z-index: 4;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+li:hover{
+  background-color: #6CF;
+  box-shadow: #333;
+}
+
+#divLi {
+  visibility: hidden;
+  z-index: 30;
+  border: thin solid skyblue;
+  background: rgba(255, 255,255,1);
+}
+

@@ -1,12 +1,19 @@
-import Router from './router/router'
 import 'antd/dist/antd.css';
 import './assets/css/reset.css'
 import './assets/css/common.css'
+import {BrowserRouter, Route, Switch } from 'react-router-dom'
+import wikipage from './views/Main/wikipage'
+import Home from '../src/views/Home/Home'
 
-function App() {
+const App =() =>{
   return (
     <div className='app'>
-      <Router />
+      <BrowserRouter>
+        <Switch>
+        <Route path="/home/" component={Home}/>
+        <Route path="/wikipage/" component={wikipage}/>
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }
