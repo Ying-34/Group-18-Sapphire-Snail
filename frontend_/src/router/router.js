@@ -6,7 +6,6 @@ import AboutUs from '../views/AboutUs/AboutUs'
 import ContactUs from '../views/ContactUs/ContactUs'
 import QuestionAndAnswer from '../views/QuestionAndAnswer/QuestionAndAnswer'
 
-
 // router assembly
 const Router = () => {
   return (

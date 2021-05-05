@@ -27,17 +27,6 @@ const Login = () => {
           message.error('Login Fail')
         }
       }
-  /*const onFinish = async values => { 
-    try {
-      // To login
-      await axios('/login ', values, 'POST')
-      // Route jump
-      history.replace('/')
-    } catch (error) {
-      console.log('error', error)
-      message.error('Login Fail')
-    }
-  }*/
 
   return (
     <div className='login-container'>
@@ -58,7 +47,6 @@ const Login = () => {
             >
               <Input placeholder='Username' />
             </Form.Item>
-
 
             <Form.Item
               name='password'

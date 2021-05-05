@@ -11,6 +11,7 @@
   font-weight: 500;
   color: #333;
   font-size: 18px;
+
 }
 
 .contact-li {
@@ -29,7 +30,7 @@
   border-top: none;
 }
 
-.contact-li .avatar-img {
+.contact-li .avatar-img1, .avatar-img3, .avatar-img4, .avatar-img5 {
   border-radius: 50%;
   object-fit: cover;
   width: 80px;
