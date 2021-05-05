@@ -1,6 +1,6 @@
-/* common style */
+/* Common styles */
 
-.flex{
+.flex {
   display: flex;
 }
 
@@ -20,6 +20,20 @@
   width: 100%;
 }
 
-.cursor{
+.full-h {
+  height: 100%;
+}
+
+.cursor {
   cursor: pointer;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.weak{
+  color: #808080; 
 }

@@ -1,14 +1,17 @@
 .nav-wrapper {
-  background-color: #1976d2;
+  background-color: skyblue;
   height: 60px;
   line-height: 60px;
   padding: 0 20px;
   color: #fff;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
-.logo{
+.logo {
   color: #fff;
 }
 
