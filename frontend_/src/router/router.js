@@ -6,7 +6,7 @@ import AboutUs from '../views/AboutUs/AboutUs'
 import ContactUs from '../views/ContactUs/ContactUs'
 import QuestionAndAnswer from '../views/QuestionAndAnswer/QuestionAndAnswer'
 
-// here are router assembly
+// router assembly
 const Router = () => {
   return (
     <BrowserRouter>
