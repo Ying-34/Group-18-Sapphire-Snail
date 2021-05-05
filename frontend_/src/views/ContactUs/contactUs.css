@@ -3,14 +3,14 @@
   line-height: 200%;
   color: #666;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 120px 0 60px 0;
 }
 
 .contact-us .intro {
-    margin-bottom: 30px;
-    font-weight: 500;
-    color: #333;
-    font-size: 23px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #333;
+  font-size: 18px;
 }
 
 .contact-li {
@@ -29,7 +29,7 @@
   border-top: none;
 }
 
-.contact-li .avatar-img1, .avatar-img3, .avatar-img4, .avatar-img5 {
+.contact-li .avatar-img {
   border-radius: 50%;
   object-fit: cover;
   width: 80px;
