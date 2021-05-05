@@ -1,0 +1,18 @@
+.nav-wrapper {
+  background-color: skyblue;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  color: #fff;
+}
+
+.login-btn {
+  color: #fff;
+  margin-left: 20px;
+}
