@@ -57,7 +57,7 @@ const CommentBox = (props) =>{
         <Comment
             actions={actions}
             // eslint-disable-next-line
-            author={<a style={{fontSize: 15 }}>Han Solo</a>}
+            author={<a style={{fontSize: 15, fontFamily:"Segoe UI"}}>Han Solo</a>}
             avatar={
             <Avatar
                 src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
@@ -65,7 +65,7 @@ const CommentBox = (props) =>{
             />
             }
             content={
-            <p style={{fontSize: 18 }}>
+            <p style={{fontSize: 20,lineHeight:1.2 }}>
               {props.content.props.children}
             </p>
             }

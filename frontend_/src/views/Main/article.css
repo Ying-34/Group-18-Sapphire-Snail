@@ -1,8 +1,8 @@
 
 
 .para{
+    z-index: 2;
     position: relative;
-    z-index: 1;
     padding: 15px 150px 15px 150px;
     font-family: monospace;
     font-size: 18px;

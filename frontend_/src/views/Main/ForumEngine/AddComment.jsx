@@ -11,14 +11,14 @@ const CommentList = ({ comments }) => (
     dataSource={comments}
     header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
     itemLayout="horizontal"
-    renderItem={props => <div className="CommentBox"><CommentBox {...props} /></div>}
+    renderItem={props => <div className="CommentBox" ><CommentBox {...props} /></div>}
   />
 );
 
 const Editor = ({ onChange, onSubmit, submitting, value }) => (
   <>
     <Form.Item>
-      <TextArea rows={5} onChange={onChange} value={value} style={{fontSize: 18 }}/>
+      <TextArea  rows={4} onChange={onChange} value={value} maxLength={2000} style={{fontSize: 20 }}/>
     </Form.Item>
     <Form.Item>
       <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
@@ -36,6 +36,7 @@ class AddComment extends React.Component {
   };
 
   handleSubmit = () => {
+    localStorage.setItem('keyboardInUse','no');
     if (!this.state.value) {
       return;
     }
@@ -62,6 +63,7 @@ class AddComment extends React.Component {
   };
 
   handleChange = e => {
+    localStorage.setItem('keyboardInUse','yes');
     this.setState({
       value: e.target.value,
     });
