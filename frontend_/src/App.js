@@ -8,6 +8,7 @@ import Login from '../src/views/Login/Login'
 import AboutUs from '../src/views/AboutUs/AboutUs'
 import ContactUs from '../src/views/ContactUs/ContactUs'
 import QuestionAndAnswer from '../src/views/QuestionAndAnswer/QuestionAndAnswer'
+import CreateAccount from './views/CreateAccount/CreateAccount';
 
 const App =() =>{
   return (
@@ -20,6 +21,7 @@ const App =() =>{
         <Route path="/About-us/" component={AboutUs}/>
         <Route path="/Contact-us/" component={ContactUs}/>
         <Route path="/question-answer/" component={QuestionAndAnswer}/>
+        <Route path="/create-account/" component={CreateAccount}/>
         <Route exact path="/"><Redirect to="/home" /></Route>
         </Switch>
       </BrowserRouter>
