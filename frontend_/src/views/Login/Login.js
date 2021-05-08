@@ -10,12 +10,6 @@ const Login = () => {
   const [form] = Form.useForm()
   const history = useHistory()
 
-  const onFinish = values => {
-    console.log('values', values)
-    // Route jump
-    history.replace('/')
-    // To login
-  }
   const onFinish = async ({ username, password }) => {
          try {
             const res = await axios('/login', { username, password }, 'POST');
