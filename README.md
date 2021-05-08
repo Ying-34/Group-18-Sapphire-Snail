@@ -13,7 +13,7 @@ A minimal forum application built with the following technologies:
 * [ExpressJS](https://expressjs.com/)
 * [MongoDB](https://www.mongodb.com/)
 * [Jest](https://jestjs.io/)
-* [Wiki Database](https://en.wikipedia.org/w/api.php)
+* [Wiki API](https://en.wikipedia.org/w/api.php)
 
 ### Application Features
 * Users can search on this forum, which is linked to wiki database
