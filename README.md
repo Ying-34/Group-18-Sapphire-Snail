@@ -18,11 +18,14 @@ A minimal forum application built with the following technologies:
 ### Documentations
 * [API Docs]()
 
-### Home View
-![home view]()
+### Homepage View
+![Homepage view]((./Readme Pics/Homepage View.gif))
 
-### Comment Page
-![comment page]()
+### Comment 
+![comment]()
+
+### Note 
+![Note]()
 
 ## Deploy on you own server
 
@@ -31,6 +34,7 @@ Please make sure you have following software installed in your system:
 * NPM / Yarn
 * Git
 * MongoDB
+* Jest
 
 To prepare this project, we need to clone the repository:<br>
 `$ git clone https://github.com/`
@@ -54,7 +58,7 @@ if npm:
 `$ npm start`
 
 if yarn:<br>
-1. install yarn:<br><br>
+1. install yarn:<br>
 `$ yarn install`
 2. Is yarn installed? if not:<br>
 `$ npm install -g yarn`
@@ -69,7 +73,7 @@ if yarn:<br>
 
 Then, we need to run frontend:<br>
 direct to frontend folder<br>
-`$ cd frontend_`
+  `$ cd frontend_`
 
 if npm:<br>
 1. install npm:<br>
@@ -86,5 +90,5 @@ if yarn:<br>
 
 We need to provide all the information here. You can notice that we need the database url here too. My `local` MongoDB url looks like:<br>
 ```
-mongodb://localhost:27017/reforum
+mongodb+srv://cluster0.yxtjp.mongodb.net/test
 ```
