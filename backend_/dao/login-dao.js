@@ -45,6 +45,11 @@ async function deleteAllUsers(){
     await loginSchema.deleteMany({});
 }
 
+
+async function deleteAllUsers(){
+    await loginSchema.deleteMany({});
+}
+
 async function getUserByUsername(username){
     const findLogin = await loginSchema.findOne({ username : username });
     if(findLogin){
@@ -55,3 +60,4 @@ async function getUserByUsername(username){
 }
 
 module.exports = { register, login, deleteAllUsers, getUserByUsername }
+
