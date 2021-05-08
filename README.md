@@ -32,7 +32,7 @@ Please make sure you have following software installed in your system:
 * Git
 * MongoDB
 
-To prepare this project, we need to clone the repository:
+To prepare this project, we need to clone the repository:<br>
 `$ git clone https://github.com/`
 
 To start this project:
