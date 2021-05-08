@@ -1,4 +1,5 @@
 import Nav from '../../components/Nav/Nav'
+import snipaste from '../../assets/imgs/snipaste.png'
 import Snail1 from '../../assets/imgs/Snail1.jpeg'
 import Snail3 from '../../assets/imgs/Snail3.jpeg'
 import Snail4 from '../../assets/imgs/Snail4.jpeg'
