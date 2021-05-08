@@ -21,8 +21,11 @@ A minimal forum application built with the following technologies:
 ### Home View
 ![home view](./Readme_Pics/Homepage_View.gif)
 
-### Content Page
-![content page]()
+### Add Comment
+![add comment](../Readme_Pics/comment.gif)
+
+### Add Note
+![add note](../Readme_Pics/comment.gif)
 
 ## Deploy on you own server
 
