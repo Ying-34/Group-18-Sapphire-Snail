@@ -192,6 +192,4 @@ class WikiSearch extends Component{
     }
 }
 
-
 export default WikiSearch;
-

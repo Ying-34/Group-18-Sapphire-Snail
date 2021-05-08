@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles} from '@material-ui/core/styles';
 import { Input } from 'antd';
-//import ReactDOM from  'react-dom';
+import ReactDOM from  'react-dom';
 
 const { TextArea } = Input;
 
@@ -53,7 +53,9 @@ class FloatNotes extends React.Component {
     id: localStorage.noteNo,
     value: '',
     title: this.props.noteTit,
-    content: this.props.content
+    content: this.props.content,
+    x: this.props.x,
+    y: this.props.y
   };
 
   hide = () => {
@@ -65,6 +67,7 @@ class FloatNotes extends React.Component {
   
   delete =()=>{
     console.log(this.state.id);
+    ReactDOM.unmountComponentAtNode(document.getElementById('note'+this.state.id));
   }
 
   handleHoverChange = visible => {
@@ -79,6 +82,7 @@ class FloatNotes extends React.Component {
         this.setState({
         clicked: visible,
         hovered: false,
+
         });
     }
   };
@@ -116,7 +120,7 @@ class FloatNotes extends React.Component {
     const hoverContent = <div>{this.state.content}</div>;
     const clickContent = <this.Editor onChange={this.noteChange} value={this.state.value}/>;
 
-    console.log(this.props);
+    //console.log(this.props);
 
     //document.getElementById('notes').style.left = this.props.x-100+'px';
     //document.getElementById('notes').style.top = this.props.y-20+'px';
@@ -124,8 +128,8 @@ class FloatNotes extends React.Component {
       <span id={"Popover"+ localStorage.noteNo} style={{
         position: 'absolute',
         zIndex: 1,
-        left: this.props.x,
-        top: this.props.y
+        left: this.state.x,
+        top: this.state.y
         }}>
         <Popover
             style={{ width: 500}}
@@ -159,4 +163,3 @@ class FloatNotes extends React.Component {
 }
 
 export default FloatNotes;
-

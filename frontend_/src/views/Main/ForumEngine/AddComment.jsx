@@ -3,6 +3,7 @@ import React from 'react';
 import moment from 'moment';
 import CommentBox from './CommentBox';
 import './Forum.css';
+import axios from 'axios';
 
 const { TextArea } = Input;
 
@@ -35,7 +36,22 @@ class AddComment extends React.Component {
     value: '',
   };
 
-  handleSubmit = () => {
+  componentDidMount =async()=>{
+    try {
+      await axios.get('http://localhost:5000/pageComments/get/'+localStorage.event)
+        .then(res =>
+          {
+            console.log(res.data);
+             this.setState({ comments: res.data});
+          }
+        );
+        //console.log(data)
+      } catch (error) {
+        console.log(error);
+      } 
+  }
+
+  handleSubmit = async () => {
     localStorage.setItem('keyboardInUse','no');
     if (!this.state.value) {
       return;
@@ -45,7 +61,7 @@ class AddComment extends React.Component {
       submitting: true,
     });
 
-    setTimeout(() => {
+    setTimeout( async() => {
       this.setState({
         submitting: false,
         value: '',
@@ -59,7 +75,25 @@ class AddComment extends React.Component {
           },
         ],
       });
+      const data = {
+        pageName: localStorage.event,
+        comments: this.state.comments
+      }
+
+      //add comments to database
+  
+      try {
+          await axios.post('http://localhost:5000/pageComments/add', data)
+            .then(res => console.log(res.data));
+            //console.log(data)
+          } catch (error) {
+            console.log(error);
+            await axios.post('http://localhost:5000/pageComments/update', data)
+            .then(res => console.log(res.data));
+            console.log(data);
+          } 
     }, 1000);
+
   };
 
   handleChange = e => {
@@ -71,6 +105,8 @@ class AddComment extends React.Component {
 
   render() {
     const { comments, submitting, value } = this.state;
+
+    //console.log(comments);
 
     return (
       <>
@@ -96,6 +132,4 @@ class AddComment extends React.Component {
   }
 }
 
-
 export default AddComment;
-

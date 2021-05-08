@@ -84,9 +84,9 @@ const Loadwiki = () =>{
 }
 
 
-const Article =()=>{
-  console.log(localStorage.event);
-  axios.get('https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exchar=100&explaintext&format=json&titles='+localStorage.event)
+const Article =(props)=>{
+  console.log(props.pageName);
+  axios.get('https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exchar=100&explaintext&format=json&titles='+props.pageName)
   .then(
     wikiResponse => {
       const data = wikiResponse.data;
