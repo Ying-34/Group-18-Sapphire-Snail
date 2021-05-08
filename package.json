@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "name": "Group-18-Sapphire-Snail",
+  "version": "、",
+  "main": "index.js",
+  "repository": "https://github.com/csdoris/Group-18-Sapphire-Snail.git",
+  "author": "Ying <yingwork34@gmail.com>",
+  "license": "MIT"
+}

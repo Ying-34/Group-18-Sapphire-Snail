@@ -44,7 +44,7 @@ const ContactUs = () => {
             </div>
             <div className='information'>
               <span className='weak'>Address：</span>
-              uckland City, NZ
+              Auckland City, NZ
             </div>
             <div className='information'>
               <span className='weak'>Email：</span>
