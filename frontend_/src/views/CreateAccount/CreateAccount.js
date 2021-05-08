@@ -12,11 +12,16 @@ const CreateAccount = () => {
 
   const onFinish = async ({ username, password }) => {
     try {
-      await axios('/register', { username, password }, 'POST')
-      // Route jump
-      history.replace('/')
+      const res = await axios('/register', { username, password }, 'POST');
+      if(res.data.success){
+        //alert(res.data.username);
+        // Route jump
+        history.replace('/')
+      }else{
+        message.error(res.data.errorMessage)
+      }
     } catch (error) {
-      message.error('Register Fail')
+      message.error('Internal Server Error')
     }
   }
 

@@ -6,40 +6,24 @@ import axios from '../../api/axios'
 import './login.css'
 
 const Login = () => {
-
   // use antd form
-
   const [form] = Form.useForm()
   const history = useHistory()
 
-  const onFinish = async values => {
-        try {
-          // To login
-          const res = await axios('/login', values)
-          // If the login is successful
-          if (res.data.status === 0) {
-            localStorage.setItem('userInfo', res.data.data)
-            // Route jump
-            history.replace('/')
-          } else {
-            message.error('Login Fail' + res.data.message)
-          }
-          console.log('res', res)
-        } catch (error) {
-          message.error('Login Fail')
-        }
+  const onFinish = async ({ username, password }) => {
+         try {
+            const res = await axios('/login', { username, password }, 'POST');
+            if(res.data.success){
+              //alert(res.data.username);
+              // Route jump
+              history.replace('/')
+            }else{
+              message.error(res.data.errorMessage)
+            }
+          } catch (error) {
+              message.error('Internal Server Error')
+          }
       }
-  /*const onFinish = async values => { 
-    try {
-      // To login
-      await axios('/login ', values, 'POST')
-      // Route jump
-      history.replace('/')
-    } catch (error) {
-      console.log('error', error)
-      message.error('Login Fail')
-    }
-  }*/
 
   return (
     <div className='login-container'>
