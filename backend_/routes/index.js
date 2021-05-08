@@ -1,33 +1,9 @@
-let loginDao = require('../dao/login-dao');
-let express = require('express');
-
+var express = require('express');
 var router = express.Router();
-
-router.get('/',function(req,res){
-    res.send('Welcome to use Wiki Forum Login Function');
-});
-
-router.post('/register', async function(req, res){
-    console.log(req.body);
-    try{
-        const response = await loginDao.register(req.body.username, req.body.password);
-        res.json(response);
-    }catch(err){
-        res.status(500).json({
-            errorMessage: 'Internal Server Error'
-        });
-    }
-});
-
-router.post('/login', async function(req, res){
-    try{
-        const response = await loginDao.login(req.body.username, req.body.password);
-        res.json(response);
-    }catch(err){
-        res.status(500).json({
-            errorMessage : 'Internal Server Error'
-        })
-    }
+var model = require('../models')
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.send('welcome to login ');
 });
 
 module.exports = router;
