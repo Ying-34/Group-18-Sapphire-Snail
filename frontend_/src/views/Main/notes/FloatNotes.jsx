@@ -158,3 +158,5 @@ class FloatNotes extends React.Component {
   }
 }
 
+export default FloatNotes;
+
