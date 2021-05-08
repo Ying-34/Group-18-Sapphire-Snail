@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'https://localhost:8000'
+const BASE_URL = 'http://localhost:8080'
 
 // The default is a GET request
 export default function request(url, params, type = 'GET') {

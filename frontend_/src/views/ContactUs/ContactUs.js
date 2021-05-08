@@ -15,6 +15,7 @@ const ContactUs = () => {
         </li>
         <li className='contact-li'>
           <img className='avatar-img1' src={Snail1} alt='' />
+
           <div className='right'>
             <div className='information'>
               <span className='weak'> Name：</span>
@@ -32,7 +33,9 @@ const ContactUs = () => {
         </li>
 
         <li className='contact-li'>
+
           <img className='avatar-img5' src={Snail5} alt='' />
+
           <div className='right'>
             <div className='information'>
               <span className='weak'> Name：</span>
@@ -40,7 +43,7 @@ const ContactUs = () => {
             </div>
             <div className='information'>
               <span className='weak'>Address：</span>
-              uckland City, NZ
+              Auckland City, NZ
             </div>
             <div className='information'>
               <span className='weak'>Email：</span>
@@ -50,7 +53,9 @@ const ContactUs = () => {
         </li>
 
         <li className='contact-li'>
+
           <img className='avatar-img3' src={Snail3} alt='' />
+
           <div className='right'>
             <div className='information'>
               <span className='weak'>Name：</span>
@@ -66,7 +71,9 @@ const ContactUs = () => {
         </li>
 
         <li className='contact-li'>
+
           <img className='avatar-img4' src={Snail4} alt='' />
+
           <div className='right'>
             <div className='information'>
               <span className='weak'>Name：</span>Winona
