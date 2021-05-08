@@ -41,6 +41,10 @@ async function login(username, password){
     }
 }
 
+async function deleteAllUsers(){
+    await loginSchema.deleteMany({});
+}
+
 
 async function deleteAllUsers(){
     await loginSchema.deleteMany({});
@@ -56,5 +60,4 @@ async function getUserByUsername(username){
 }
 
 module.exports = { register, login, deleteAllUsers, getUserByUsername }
-
 

@@ -1,3 +1,4 @@
+
 const url = 'mongodb+srv://cluster0.yxtjp.mongodb.net/test'
 const dbName = 'myFirstDatabase'
 
@@ -11,7 +12,7 @@ function connect(callback){
      */
     console.log()
 
-    return mongoose.connect(`mongodb+srv://Tom:tomwmw@cluster0.yxtjp.mongodb.net/myFirstDatabase`,{
+    return mongoose.connect(`mongodb+srv://Ying:qwertyuiop123@cluster0.yxtjp.mongodb.net/myFirstDatabase`,{
 
         useNewUrlParser:true,
         useFindAndModify:false,
