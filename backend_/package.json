@@ -2,18 +2,6 @@
   "name": "wikipedia-forum",
   "version": "1.0.0",
   "description": "",
-<<<<<<< Updated upstream
-  "main": "./src/server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "esm": "^3.2.25",
-    "express": "^4.17.1"
-  }
-=======
   "private": true,
   "scripts": {
     "test": "jest",
@@ -46,5 +34,4 @@
   "main": "index.js",
   "author": "Ying <yingwork34@gmail.com>",
   "license": "MIT"
->>>>>>> Stashed changes
 }

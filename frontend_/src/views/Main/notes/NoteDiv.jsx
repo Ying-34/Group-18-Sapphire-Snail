@@ -18,3 +18,4 @@ const NoteDiv = (props) => {
 }
 
  export default NoteDiv ;
+
