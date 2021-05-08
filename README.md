@@ -19,7 +19,7 @@ A minimal forum application built with the following technologies:
 * [API Docs]()
 
 ### Home View
-![home view]((./Readme_Pics/Homepage_View.gif))
+![home view](./Readme_Pics/Homepage_View.gif)
 
 ### Content Page
 ![content page]()
