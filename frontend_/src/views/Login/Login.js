@@ -11,20 +11,23 @@ const Login = () => {
   const [form] = Form.useForm()
   const history = useHistory()
 
-  const onFinish = async ({ username, password }) => {
-         try {
-            const res = await axios('/login', { username, password }, 'POST');
-            if(res.data.success){
-             //alert(res.data.username);
-              // Route jump
-              history.replace('/')
-            }else{
-              message.error(res.data.errorMessage)
-            }
-          } catch (error) {
-              message.error('Internal Server Error')
-          }
-      }
+  const onFinish = async values => {
+        try {
+          // To login
+          const res = await axios.post('http://localhost:5000/users/login', values)
+          // If the login is successful
+          if (res.data.success) { 
+            localStorage.setItem('userInfo', res.data)
+            // Route jump
+            history.replace('/')
+          } else {
+            message.error('Login Fail!' + res.data.errorMessage)
+          }
+          console.log('res', res)
+        } catch (error) {
+          message.error('Login Fail')
+        }
+}
 
   return (
     <div className='login-container'>
