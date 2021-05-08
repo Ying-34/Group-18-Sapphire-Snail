@@ -46,5 +46,5 @@ const SearchPic =()=>{
     );
 }
 
-export default SearchPic;
 
+export default SearchPic;

@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2021-05-08 12:20:28
- * @LastEditTime: 2021-05-08 20:21:56
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /Group-18-Sapphire-Snail 2111/frontend_/src/views/Login/Login.js
- */
 import Nav from '../../components/Nav/Nav'
 import { Form, Input, Button, message } from 'antd'
 import snipaste from '../../assets/imgs/snipaste.png'
@@ -18,12 +10,17 @@ const Login = () => {
   const [form] = Form.useForm()
   const history = useHistory()
 
+  const onFinish = values => {
+    console.log('values', values)
+    // Route jump
+    history.replace('/')
+    // To login
+  }
   const onFinish = async ({ username, password }) => {
          try {
             const res = await axios('/login', { username, password }, 'POST');
             if(res.data.success){
              //alert(res.data.username);
-
               // Route jump
               history.replace('/')
             }else{
