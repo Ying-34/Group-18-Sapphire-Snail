@@ -1,6 +1,6 @@
 const MongoDB = require('mongodb').MongoClient
 
-const url = 'mongodb+srv://cluster0.yxtjp.mongodb.net/test'
+const url = 'mongodb+srv://Winona:Winona1522@cluster0.yxtjp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const dbName = 'myFirstDatabase'
 
 function connect(callback){
