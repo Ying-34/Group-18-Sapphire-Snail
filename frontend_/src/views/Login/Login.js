@@ -10,6 +10,7 @@ const Login = () => {
   // use antd form
   const [form] = Form.useForm()
   const history = useHistory()
+  localStorage.removeItem('userInfo');
 
   const onFinish = async values => {
         try {
@@ -17,7 +18,9 @@ const Login = () => {
           const res = await axios.post('http://localhost:5000/users/login', values)
           // If the login is successful
           if (res.data.success) { 
-            localStorage.setItem('userInfo', res.data)
+            localStorage.setItem('userInfo', res.data.username);
+            console.log(res.data);
+            
             // Route jump
             history.replace('/')
           } else {
