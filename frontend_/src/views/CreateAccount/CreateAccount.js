@@ -2,7 +2,8 @@ import Nav from '../../components/Nav/Nav'
 import { Form, Input, Button, message } from 'antd'
 import snipaste from '../../assets/imgs/snipaste.png'
 import { Link, useHistory } from 'react-router-dom'
-import axios from '../../api/axios'
+// eslint-disable-next-line
+import axios from 'axios';
 import './createAccount.css'
 
 const CreateAccount = () => {
@@ -11,17 +12,19 @@ const CreateAccount = () => {
   const history = useHistory()
 
   const onFinish = async ({ username, password }) => {
+    console.log( username);
+    const user = {
+      username: username,
+      password: password
+    }
     try {
-      const res = await axios('/register', { username, password }, 'POST');
-      if(res.data.success){
-        //alert(res.data.username);
-        // Route jump
-        history.replace('/')
-      }else{
-        message.error(res.data.errorMessage)
-      }
+      await axios.post('http://localhost:5000/users/register', user)
+                  .then(res => console.log(res.data));
+      // Route jump
+      history.replace('/')
     } catch (error) {
-      message.error('Internal Server Error')
+      message.error('Register Fail');
+      console.log(error);
     }
   }
 

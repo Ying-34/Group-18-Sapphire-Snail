@@ -2,7 +2,8 @@ import Nav from '../../components/Nav/Nav'
 import { Form, Input, Button, message } from 'antd'
 import snipaste from '../../assets/imgs/snipaste.png'
 import { Link, useHistory } from 'react-router-dom'
-import axios from '../../api/axios'
+// eslint-disable-next-line
+import axios from 'axios';
 import './login.css'
 
 const Login = () => {
