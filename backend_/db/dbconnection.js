@@ -10,9 +10,7 @@ function connect(callback){
      * Database connection function
      */
     console.log()
-
     return mongoose.connect(`mongodb+srv://Ying:qwertyuiop123@cluster0.yxtjp.mongodb.net/myFirstDatabase`,{
-
         useNewUrlParser:true,
         useFindAndModify:false,
         useCreateIndex:true,

@@ -61,6 +61,4 @@ const submitHandler =async (event, type) =>{
       //alert("Please enter what you want to search!");
     }
 }
-
 export default submitHandler;
-
