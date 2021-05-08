@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-08 12:16:22
+ * @LastEditTime: 2021-05-08 17:46:09
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /Group-18-Sapphire-Snail 2111/frontend_/src/views/CreateAccount/CreateAccount.js
+ */
 import Nav from '../../components/Nav/Nav'
 import { Form, Input, Button } from 'antd'
 import snipaste from '../../assets/imgs/snipaste.png'
@@ -9,9 +17,25 @@ const CreateAccount = () => {
   const [form] = Form.useForm()
   const history = useHistory()
 
+<<<<<<< Updated upstream
   const onFinish = values => {
     console.log('values', values)
     history.replace('/')
+=======
+  const onFinish = async ({ username, password }) => {
+    try {
+      const res = await axios('/register', { username, password }, 'POST');
+      if(res.data.success){
+        //alert(res.data.username);
+        // Route jump
+        history.replace('/')
+      }else{
+        message.error(res.data.errorMessage)
+      }
+    } catch (error) {
+      message.error('Internal Server Error')
+    }
+>>>>>>> Stashed changes
   }
 
   return (

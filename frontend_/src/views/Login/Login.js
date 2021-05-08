@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-08 12:20:28
+ * @LastEditTime: 2021-05-08 17:48:17
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /Group-18-Sapphire-Snail 2111/frontend_/src/views/Login/Login.js
+ */
 import Nav from '../../components/Nav/Nav'
 import { Form, Input, Button } from 'antd'
 import snipaste from '../../assets/imgs/snipaste.png'
@@ -9,12 +17,29 @@ const Login = () => {
   const [form] = Form.useForm()
   const history = useHistory()
 
+<<<<<<< Updated upstream
   const onFinish = values => {
     console.log('values', values)
     // Route jump
     history.replace('/')
     // To login
   }
+=======
+  const onFinish = async ({ username, password }) => {
+         try {
+            const res = await axios('/login', { username, password }, 'POST');
+            if(res.data.success){
+             //alert(res.data.username);
+              // Route jump
+              history.replace('/')
+            }else{
+              message.error(res.data.errorMessage)
+            }
+          } catch (error) {
+              message.error('Internal Server Error')
+          }
+      }
+>>>>>>> Stashed changes
 
   return (
     <div className='login-container'>
