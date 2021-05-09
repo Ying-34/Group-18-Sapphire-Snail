@@ -46,7 +46,7 @@ To prepare this project, we need to clone the repository:<br>
 To start this project:<br>
 First, we need to connect to the database:<br>
     `$ mongodb+srv://<username>:<password>@cluster0.yxtjp.mongodb.net/test`<br>
-To change <username> and <password> into your username and password for mongodb<br>
+(Don't forget to change <username> and <password> into your username and password for mongodb)<br>
     
 Then we can test this project(optional):<br>
 if npm:<br>
