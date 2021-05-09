@@ -28,6 +28,9 @@ connection.once('open', () => {
 const loginRouter = require('./routes/accountRouter');
 app.use('/users', loginRouter);
 
+const commentsRouter = require('./routes/commentsRouter');
+app.use('/pageComments', commentsRouter);
+
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });

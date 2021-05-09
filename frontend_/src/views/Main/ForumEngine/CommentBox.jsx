@@ -51,7 +51,7 @@ const CommentBox = (props) =>{
       /*<span key="comment-basic-reply-to" style={{fontSize: 15 }} onClick={leaveComment}>Reply to</span>,*/
     ];
 
-    console.log(props);
+    //console.log(props);
   
     return (
         <Comment

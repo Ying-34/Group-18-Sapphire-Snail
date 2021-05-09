@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2021-05-08 12:16:22
- * @LastEditTime: 2021-05-08 17:46:09
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: /Group-18-Sapphire-Snail 2111/frontend_/src/views/CreateAccount/CreateAccount.js
- */
 import Nav from '../../components/Nav/Nav'
 import { Form, Input, Button, message } from 'antd'
 import snipaste from '../../assets/imgs/snipaste.png'

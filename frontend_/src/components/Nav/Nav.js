@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 import { SearchOutlined } from '@ant-design/icons'
 import './nav.css'
 import submitHandler from '../../views/Main/searchEngine/searchE'
+import Button from '@material-ui/core/Button'
+import { Avatar } from 'antd'
+
+
 
 const Nav =()=>{
   /**
@@ -11,8 +15,12 @@ const Nav =()=>{
    * If the parent component does not transfer the title, it will be displayed as "Sapphire snail" by default
    */
 
-  const [val, setVal] = useState('');
+  const [val, setVal] = useState(''); 
 
+  const logout =(userInfo)=>{
+    var win = window.open('/login','_self');
+    win.focus();
+  }
 
     return (
       <div className='nav-wrapper'>
@@ -27,9 +35,17 @@ const Nav =()=>{
             <Input onChange={e => setVal(e.target.value)} onSearch={submitHandler(val,'divL')}  suffix={<SearchOutlined />} />
             <div id="divL" style={{zIndex:2}}></div>
           </div>
-          <Link to='/login' className='login-btn'>
-            Login
-          </Link>
+          {
+            !localStorage.userInfo
+            ? <Link id='login' to='/login' className='login-btn' >
+                Login   
+              </Link>
+            : <p className='login-btn'>{"Welcome! "+localStorage.userInfo+' '} 
+            <Avatar size="small" src={localStorage.avatar}/>
+            <Button color='primary' type='text' id='logout' onClick={logout}>
+              Logout
+            </Button></p>
+          }
         </div>
       </div>
     )
