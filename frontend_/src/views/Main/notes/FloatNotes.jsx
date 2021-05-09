@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import { withStyles} from '@material-ui/core/styles';
 import { Input } from 'antd';
 import ReactDOM from  'react-dom';
+import axios from 'axios';
 
 const { TextArea } = Input;
 
@@ -55,7 +56,8 @@ class FloatNotes extends React.Component {
     title: this.props.noteTit,
     content: this.props.content,
     x: this.props.x,
-    y: this.props.y
+    y: this.props.y,
+    databaseId: this.props.databaseId
   };
 
   hide = () => {
@@ -93,7 +95,7 @@ class FloatNotes extends React.Component {
     </>
   );
 
-  noteChange =(e)=>{
+  noteChange =async(e)=>{
     this.setState({
       value: e.target.value,
     });
@@ -101,24 +103,29 @@ class FloatNotes extends React.Component {
     if (!e.target.value) {
       return;
     }
-    this.setState({
+    await this.setState({
         content: e.target.value
     });
-    console.log(this.state.content);
+    //console.log(this.state.content);
+
+    await axios.post('http://localhost:5000/notes/updateTipContent/'+this.state.databaseId, {content: this.state.content})
+          .then(res => console.log(res.data));
   }
 
-  titChange =(e)=>{
+  titChange =async(e)=>{
     if (!e.target.value) {
       return;
     }
-    this.setState({
+    await this.setState({
       title: e.target.value
   });
+   await axios.post('http://localhost:5000/notes/updateTipTit/'+this.state.databaseId, {noteTit: this.state.title})
+  .then(res => console.log(res.data));
   }
 
   render() {
     const hoverContent = <div>{this.state.content}</div>;
-    const clickContent = <this.Editor onChange={this.noteChange} value={this.state.value}/>;
+    const clickContent = <this.Editor onChange={this.noteChange} value={this.state.content}/>;
 
     //console.log(this.props);
 
@@ -149,7 +156,7 @@ class FloatNotes extends React.Component {
                 <a style={{float:'right'}} onClick={this.delete}>Delete</a>
                 </div>
             }
-            title={<Input placeholder="title" onChange={this.titChange}/>}
+            title={<Input placeholder="title" onChange={this.titChange} value={this.state.title}/>}
             trigger="click"
             visible={this.state.clicked}
             onVisibleChange={this.handleClickChange}
