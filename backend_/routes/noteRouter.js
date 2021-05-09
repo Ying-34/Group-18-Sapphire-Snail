@@ -46,6 +46,17 @@ router.route('/updateTipTit/:id').post((req,res) =>{
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/delete/:id').get((req,res) =>{
+    notes.remove({_id: req.params.id},function(err) {
+        if (!err) {
+                 res.json('note deleted!');
+        }
+        else {
+            res.status(400).json('Error: ' + err);
+        }
+    });
+});
+
 router.route('/get/:pgName/:userName').get((req,res) =>{
     //console.log(req.params);
     notes.find({pageName: req.params.pgName, userName: req.params.userName})
