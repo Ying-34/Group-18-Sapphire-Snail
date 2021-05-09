@@ -12,23 +12,17 @@ const CreateAccount = () => {
   const history = useHistory()
 
   const onFinish = async ({ username, password }) => {
+    console.log( username);
     const user = {
       username: username,
-      password: password
+      password: password,
+      avatar: "https://i.ibb.co/DVTnXWx/Snail1.png"
     }
     try {
-      //Need to modify
       await axios.post('http://localhost:5000/users/register', user)
-                  .then(res => {
-                    if(res.data.success){
-                       // Route jump
-                      history.replace('/login')
-                    }else{
-                      message.error(res.data.errorMessage)
-                    }
-                  })
-                  .catch(err => message.error("Internal Server Error"));
-     
+                  .then(res => console.log(res.data));
+      // Route jump
+      history.replace('/')
     } catch (error) {
       message.error('Register Fail');
       console.log(error);
