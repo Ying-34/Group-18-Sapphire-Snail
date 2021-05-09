@@ -1,11 +1,10 @@
 const loginSchema = require("../models/login");
 
-async function register(username, password, avatar){
+async function register(username, password){
     let dbLogin;
     var user = {
         username,
-        password,
-        avatar
+        password
     }
     try{
         dbLogin = new loginSchema(user);
@@ -35,13 +34,25 @@ async function login(username, password){
         if(findLogin.password != password){
             return { success : false, errorMessage : " Password not match " }
         }else{
-            return { success : true, username : username , avatar: findLogin.avatar}
+            return { success : true, username : username }
         }
     }else{
         return { success : false, errorMessage : " Username not exist " }
     }
 }
 
+async function deleteAllUsers(){
+    await loginSchema.deleteMany({});
+}
 
+async function getUserByUsername(username){
+    const findLogin = await loginSchema.findOne({ username : username });
+    if(findLogin){
+        return findLogin;
+    }else{
+        return null;
+    }
+}
 
-module.exports = { register, login }
+module.exports = { register, login, deleteAllUsers, getUserByUsername }
+
