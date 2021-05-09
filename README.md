@@ -91,8 +91,8 @@ if yarn:<br>
 2. run the app in production environment:<br>
 `$ yarn run start`
 
-Zoom Meeting Summary:<br>
-3/21<br>
+##Zoom Meeting Summary:<br>
+####3/21<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 In this meeting, we decided on the theme of the project (Wikipedia Forum). And discussed our project needs to achieve the specific functions, the general page, related research and technology resources.<br>
@@ -100,14 +100,14 @@ Finally, we allocate what proposal needs to write.
 Daily group discussion: <br>
 via WeChat project discussion group (anytime) <br>
 
-3/28（Project Proposal Due）<br>
+####3/28（Project Proposal Due）<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 In the previous time, we completed the selection of the basic information of the project and the writing of the proposal (personally). Therefore, in this meeting, we integrated and unified typesetting the proposal content of each team member.
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
  
-4/4<br>
+####4/4<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 Since our team members have not been exposed to the relevant knowledge of the project (such as react, express, and MongoDB) in the previous learning process, we encountered some big problems in the development process this week.<br>
@@ -115,14 +115,14 @@ In this meeting, we discussed and decided that in the next few weeks (until Apri
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
  
-4/11<br>
+####4/11<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 At this week's meeting, we shared and summarized the learning achievements of last week. And for this week's learning process, problems were discussed with each other, solved by most of the team members for React and MongoDB questions. However, the learning of node.js and express framework is still not enough. Therefore, we decided to focus on the knowledge related to the back end of next week's learning process.<br>
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
  
-4/18<br>
+####4/18<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 In this week's meeting, we shared and summarized the relevant knowledge needed by the back end. Through the meeting's discussion, we have a comprehensive and systematic understanding and mastery of the whole project.<br>
@@ -135,7 +135,7 @@ Tom: write readme and find background pictures<br>
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
  
-4/25<br>
+####4/25<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 In this week's meeting, we looked at the front-end pages completed by each team member. And the page style has been changed to a blue and pink page design. And unify the navigation format.<br>
@@ -147,7 +147,7 @@ Tom: update readme file and find background pictures & logo icon，write a proje
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
 
-5/2<br>
+####5/2<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 This week, we continue to integrate the front-end pages and plan to upload all our frontend files to GitHub for version control and sharing.<br>
@@ -160,7 +160,7 @@ Tom: update readme file, write our project test function<br>
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent conference（group member's private instant meeting）<br>
 
-5/9(project implementation due)<br>
+####5/9(project implementation due)<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 In the last meeting, we reviewed the whole project. We go through the functions one by one and make sure these are working in everyone’s environment. 
