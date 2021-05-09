@@ -5,6 +5,9 @@ import { SearchOutlined } from '@ant-design/icons'
 import './nav.css'
 import submitHandler from '../../views/Main/searchEngine/searchE'
 import Button from '@material-ui/core/Button'
+import { Avatar } from 'antd'
+
+
 
 const Nav =()=>{
   /**
@@ -35,18 +38,14 @@ const Nav =()=>{
           {
             !localStorage.userInfo
             ? <Link id='login' to='/login' className='login-btn' >
-                Login
+                Login   
               </Link>
-            : <p className='login-btn'>{"Welcome! "+localStorage.userInfo} </p>
-          }
-          {
-            localStorage.userInfo
-            ? <Button color='primary' type='text' id='logout' onClick={logout}>
+            : <p className='login-btn'>{"Welcome! "+localStorage.userInfo+' '} 
+            <Avatar size="small" src={localStorage.avatar}/>
+            <Button color='primary' type='text' id='logout' onClick={logout}>
               Logout
-              </Button>
-            : <div/>
+            </Button></p>
           }
-          
         </div>
       </div>
     )
