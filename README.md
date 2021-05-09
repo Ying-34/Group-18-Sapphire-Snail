@@ -96,14 +96,14 @@ if yarn:<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 In this meeting, we decided on the theme of the project (Wikipedia Forum). And discussed our project needs to achieve the specific functions, the general page, related research and technology resources.<br>
-Finally, we allocate what proposal needs to write.
+Finally, we allocate what proposal needs to write.<br>
 Daily group discussion: <br>
 via WeChat project discussion group (anytime) <br>
 
 #### 3/28（Project Proposal Due）<br>
 Number of participants: Full participation<br>
 Meeting minutes:<br>
-In the previous time, we completed the selection of the basic information of the project and the writing of the proposal (personally). Therefore, in this meeting, we integrated and unified typesetting the proposal content of each team member.
+In the previous time, we completed the selection of the basic information of the project and the writing of the proposal (personally). Therefore, in this meeting, we integrated and unified typesetting the proposal content of each team member.<br>
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
  
