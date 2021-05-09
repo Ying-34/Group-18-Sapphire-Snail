@@ -7,7 +7,7 @@ each other. The project was founded by Chloe, Tom, Yvonne and Winona, members of
 18. Now a complete web app is provided, users can get social interaction in the process
 of reading through comments.<br>
 
-A minimal forum application built with the following technologies:
+### A minimal forum application built with the following technologies
 * [React](https://facebook.github.io/react/)
 * [Node.js](https://nodejs.org/)
 * [ExpressJS](https://expressjs.com/)
