@@ -21,7 +21,25 @@ class wikipage extends React.Component {
   componentDidMount =async()=>{
     try{
       await axios.get('http://localhost:5000/notes/get/'+this.props.match.params.pageName+'/'+localStorage.userInfo)
-            .then(res => console.log(res));
+            .then(res =>{
+              console.log(res.data);
+              localStorage.setItem('noteNo',res.data.length);
+              ReactDOM.render(<NoteDiv/>,document.getElementById('notes'));
+              var i = 1;
+              for(var key in res.data)
+              {
+                var value = res.data[key];
+                console.log(value._id);
+                ReactDOM.render(<FloatNotes
+                 databaseId={value._id}
+                 x={value.x} 
+                 y={value.y} 
+                 content= {value.content}
+                 noteTit= {value.noteTit}
+               />,document.getElementById('note'+i));  
+               i++;
+              }
+            });
       }catch (error){
         console.log(error);
       }
@@ -46,16 +64,19 @@ class wikipage extends React.Component {
       }
       try{
       await axios.post('http://localhost:5000/notes/postTip', notePost)
-            .then(res => console.log(res.data));
+            .then(res => {
+              //console.log(res.data);
+              ReactDOM.render(<FloatNotes x={localStorage.x-20+'px'} 
+              databaseId = {res.data}
+              y={localStorage.y-20+'px'} 
+              content='note content'
+              noteTit='note'
+              />,document.getElementById('note'+localStorage.noteNo));          
+            });
       }catch (error){
         console.log(error);
       }
 
-      ReactDOM.render(<FloatNotes x={localStorage.x-20+'px'} 
-      y={localStorage.y-20+'px'} 
-      content='note content'
-      noteTit='note'
-      />,document.getElementById('note'+localStorage.noteNo));  
 
     },100);
     }
