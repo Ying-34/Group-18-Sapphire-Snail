@@ -55,3 +55,4 @@ async function getUserByUsername(username){
 }
 
 module.exports = { register, login, deleteAllUsers, getUserByUsername }
+
