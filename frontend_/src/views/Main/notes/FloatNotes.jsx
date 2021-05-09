@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles} from '@material-ui/core/styles';
 import { Input } from 'antd';
-import ReactDOM from  'react-dom';
+//import ReactDOM from  'react-dom';
 import axios from 'axios';
 
 const { TextArea } = Input;
@@ -67,9 +67,11 @@ class FloatNotes extends React.Component {
     });
   };
   
-  delete =()=>{
+  delete =async()=>{
     console.log(this.state.id);
-    ReactDOM.unmountComponentAtNode(document.getElementById('note'+this.state.id));
+    await axios.get('http://localhost:5000/notes/delete/'+this.state.databaseId)
+          .then(res => console.log(res.data));
+    window.location.reload(false);
   }
 
   handleHoverChange = visible => {
@@ -132,7 +134,7 @@ class FloatNotes extends React.Component {
     //document.getElementById('notes').style.left = this.props.x-100+'px';
     //document.getElementById('notes').style.top = this.props.y-20+'px';
     return (
-      <span id={"Popover"+ localStorage.noteNo} style={{
+      <span id={this.state.databaseId} style={{
         position: 'absolute',
         zIndex: 1,
         left: this.state.x,
