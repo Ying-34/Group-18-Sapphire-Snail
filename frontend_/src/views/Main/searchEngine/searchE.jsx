@@ -1,15 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import ReactDOM from  'react-dom';
-import Article from '../article';
+//import Article from '../article';
 
 var wikiResult = [];
 
 const clickli = async (event) => {
   var e = event.target.innerHTML;
   localStorage.setItem("event", e);
-  Article();
-  var win = window.open('/wikipage','_self');
+  var win = window.open('/wikipage/'+e,'_self');
   win.focus();
   
   }
@@ -61,6 +60,4 @@ const submitHandler =async (event, type) =>{
       //alert("Please enter what you want to search!");
     }
 }
-
 export default submitHandler;
-

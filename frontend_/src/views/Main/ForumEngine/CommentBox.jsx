@@ -1,14 +1,17 @@
 import React, { createElement, useState } from 'react';
 import { Comment, Tooltip, Avatar } from 'antd';
 import moment from 'moment';
-import { DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled } from '@ant-design/icons';
+import { DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled} from '@ant-design/icons';
 //import ReactDOM from  'react-dom';
+
 import './Forum.css';
 
 const CommentBox = (props) =>{
     const [likes, setLikes] = useState(0);
     const [dislikes, setDislikes] = useState(0);
     const [action, setAction] = useState(null);
+    if(props.likes)  setLikes(props.likes);
+    if(props.dislikes)  setLikes(props.dislikes);
   
     const like = () => {
       if(action!=='liked') 
@@ -51,17 +54,17 @@ const CommentBox = (props) =>{
       /*<span key="comment-basic-reply-to" style={{fontSize: 15 }} onClick={leaveComment}>Reply to</span>,*/
     ];
 
-    console.log(props);
+    //console.log(props);
   
     return (
         <Comment
             actions={actions}
             // eslint-disable-next-line
-            author={<a style={{fontSize: 15, fontFamily:"Segoe UI"}}>Han Solo</a>}
+            author={<a style={{fontSize: 15, fontFamily:"Segoe UI"}}>{props.author}</a>}
             avatar={
             <Avatar
-                src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                alt="Han Solo"
+                src={props.avatar}
+                alt={props.author}
             />
             }
             content={

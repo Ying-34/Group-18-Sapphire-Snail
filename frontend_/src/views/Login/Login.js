@@ -2,28 +2,36 @@ import Nav from '../../components/Nav/Nav'
 import { Form, Input, Button, message } from 'antd'
 import snipaste from '../../assets/imgs/snipaste.png'
 import { Link, useHistory } from 'react-router-dom'
-import axios from '../../api/axios'
+// eslint-disable-next-line
+import axios from 'axios';
 import './login.css'
 
 const Login = () => {
   // use antd form
   const [form] = Form.useForm()
   const history = useHistory()
+  localStorage.removeItem('userInfo');
 
-  const onFinish = async ({ username, password }) => {
-         try {
-            const res = await axios('/login', { username, password }, 'POST');
-            if(res.data.success){
-              //alert(res.data.username);
-              // Route jump
-              history.replace('/')
-            }else{
-              message.error(res.data.errorMessage)
-            }
-          } catch (error) {
-              message.error('Internal Server Error')
-          }
-      }
+  const onFinish = async values => {
+        try {
+          // To login
+          const res = await axios.post('http://localhost:5000/users/login', values)
+          // If the login is successful
+          if (res.data.success) { 
+            localStorage.setItem('userInfo', res.data.username);
+            localStorage.setItem('avatar', res.data.avatar);
+            console.log(res.data);
+            
+            // Route jump
+            history.replace('/')
+          } else {
+            message.error('Login Fail!' + res.data.errorMessage)
+          }
+          console.log('res', res)
+        } catch (error) {
+          message.error('Login Fail')
+        }
+}
 
   return (
     <div className='login-container'>
