@@ -111,7 +111,7 @@ via WeChat project discussion group (anytime)，Tencent Conference（group membe
 Number of participants: Full participation<br>
 Meeting minutes:<br>
 Since our team members have not been exposed to the relevant knowledge of the project (such as react, express, and MongoDB) in the previous learning process, we encountered some big problems in the development process this week.<br>
-In this meeting, we discussed and decided that in the next few weeks (until April 18th), we will have a more comprehensive study of the knowledge required for this project.
+In this meeting, we discussed and decided that in the next few weeks (until April 18th), we will have a more comprehensive study of the knowledge required for this project.<br>
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
  
@@ -142,7 +142,7 @@ In this week's meeting, we looked at the front-end pages completed by each team 
 Therefore, in the next week, we will make a second change to the front-end page based on the results discussed this week. We will also start backend implementation.
 Project division:<br>
 Chloe：main page (information & comment )，Study and use of Wikipedia API(search function ), backend about these pages and function.<br>
-Yvonne & Winona：Home page (Added three basic page displays include about us, Q&A, contact ),  log in and create a new account, backend about these pages.
+Yvonne & Winona：Home page (Added three basic page displays include about us, Q&A, contact ),  log in and create a new account, backend about these pages.<br>
 Tom: update readme file and find background pictures & logo icon，write a project test function<br>
 Daily group discussion: <br>
 via WeChat project discussion group (anytime)，Tencent Conference（group member's private instant meeting）<br>
