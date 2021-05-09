@@ -1,3 +1,4 @@
+
 var mongoose = require("mongoose");
 
 var loginSchema = new mongoose.Schema({
@@ -9,6 +10,9 @@ var loginSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    avatar:{
+        type: String
     }
 });
 

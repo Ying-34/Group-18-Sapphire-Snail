@@ -7,14 +7,20 @@ import axios from 'axios';
 
 const { TextArea } = Input;
 
-const CommentList = ({ comments }) => (
+
+const CommentList = ({ comments }) => {
+
+  var t = 1;
+
+  return(
   <List
     dataSource={comments}
     header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
     itemLayout="horizontal"
-    renderItem={props => <div className="CommentBox" ><CommentBox {...props} /></div>}
+    renderItem={props => <div id={'comment'+t++} className="CommentBox" ><CommentBox {...props} /></div>}
   />
-);
+  );
+};
 
 const Editor = ({ onChange, onSubmit, submitting, value }) => (
   <>
@@ -41,7 +47,7 @@ class AddComment extends React.Component {
       await axios.get('http://localhost:5000/pageComments/get/'+localStorage.event)
         .then(res =>
           {
-            console.log(res.data);
+            //console.log(res.data);
              this.setState({ comments: res.data});
           }
         );
@@ -68,12 +74,13 @@ class AddComment extends React.Component {
         comments: [
           ...this.state.comments,
           {
-            author: 'Han Solo',
-            avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+            author: localStorage.userInfo,
+            avatar: "https://i.ibb.co/DVTnXWx/Snail1.png",
             content: <p>{this.state.value}</p>,
-            datetime: moment().fromNow(),
+            datetime: moment().fromNow()
           },
         ],
+        
       });
       const data = {
         pageName: localStorage.event,
@@ -114,8 +121,8 @@ class AddComment extends React.Component {
         <Comment
           avatar={
             <Avatar
-              src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-              alt="Han Solo"
+              src={localStorage.avatar}
+              alt={localStorage.userInfo}
             />
           }
           content={

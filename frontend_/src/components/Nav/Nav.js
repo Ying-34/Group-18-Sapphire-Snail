@@ -41,7 +41,7 @@ const Nav =()=>{
                 Login   
               </Link>
             : <p className='login-btn'>{"Welcome! "+localStorage.userInfo+' '} 
-            <Avatar size="small" src={localStorage.avatar}>{localStorage.userInfo[0].toUpperCase()}</Avatar>
+            <Avatar size="small" src={localStorage.avatar}/>
             <Button color='primary' type='text' id='logout' onClick={logout}>
               Logout
             </Button></p>

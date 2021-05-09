@@ -16,7 +16,7 @@ const App =() =>{
       <BrowserRouter>
         <Switch>
         <Route path="/home/" component={Home}/>
-        <Route path="/wikipage/" component={wikipage}/>
+        <Route path="/wikipage/:pageName" component={wikipage}/>
         <Route path="/Login/" component={Login}/>
         <Route path="/About-us/" component={AboutUs}/>
         <Route path="/Contact-us/" component={ContactUs}/>

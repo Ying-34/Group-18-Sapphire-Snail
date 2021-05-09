@@ -8,9 +8,9 @@ router.get('/',function(req,res){
 });
 
 router.post('/register', async function(req, res){
-    console.log(req.body);
+    console.log(req.body.avatar);
     try{
-        const response = await loginDao.register(req.body.username, req.body.password);
+        const response = await loginDao.register(req.body.username, req.body.password, req.body.avatar);
         res.json(response);
     }catch(err){
         res.status(500).json({
