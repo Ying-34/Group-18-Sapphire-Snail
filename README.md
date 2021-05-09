@@ -51,15 +51,15 @@ First, we need to connect to the database:<br>
     
 Then we can test this project(optional):<br>
 if npm:<br>
-    `$ npm install`
+    `$ npm install`<br>
     `$ npm run test`
 
 if yarn:<br>
-    `$ yarn install`
+    `$ yarn install`<br>
     `$ yarn run test`
 
 Secondly, we need to run backend:<br>
-direct to backend folder<br>
+    direct to backend folder<br>
     `$ cd backend_`
 
 Then we have to install the necessary dependencies using either NPM or Yarn:<br>
@@ -68,17 +68,14 @@ if npm:<br>
 1. install npm:<br>
 `$ npm install`
 2. start nodemon:<br>
-`$nodemon server start`
-3. start this project:<br>
-`$ npm start` -->
+`$nodemon server`
+
 
 if yarn:<br>
 1. install yarn:<br>
 `$ yarn install`
 2. start nodemon:<br>
-`$nodemon server start`
-3. start this project:<br>
-`$ yarn start` -->
+`$nodemon server`
 
 Then, we need to run frontend:<br>
 direct to frontend folder<br>
