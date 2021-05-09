@@ -17,8 +17,9 @@ of reading through comments.<br>
 
 ### Application Features
 * Users can search on this forum, which is linked to wiki database
-* Users can register or sign in the forum
+* Users can register and sign in the forum
 * Users can post a comment
+* Users can take notes on this forum
 
 ### Documentations
 * [API Docs](https://github.com/csdoris/Group-18-Sapphire-Snail/blob/main/frontend_/src/api/axios.js)
@@ -66,13 +67,17 @@ Then we have to install the necessary dependencies using either NPM or Yarn:<br>
 if npm:<br>
 1. install npm:<br>
 `$ npm install`
-2. start this project:<br>
+2. start nodemon:<br>
+`$nodemon server start`
+3. start this project:<br>
 `$ npm start` -->
 
 if yarn:<br>
 1. install yarn:<br>
 `$ yarn install`
-2. start this project:<br>
+2. start nodemon:<br>
+`$nodemon server start`
+3. start this project:<br>
 `$ yarn start` -->
 
 Then, we need to run frontend:<br>
