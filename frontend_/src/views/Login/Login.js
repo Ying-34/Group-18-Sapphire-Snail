@@ -19,6 +19,7 @@ const Login = () => {
           // If the login is successful
           if (res.data.success) { 
             localStorage.setItem('userInfo', res.data.username);
+            localStorage.setItem('avatar', res.data.avatar);
             console.log(res.data);
             
             // Route jump

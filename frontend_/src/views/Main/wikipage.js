@@ -6,7 +6,7 @@ import ReactDOM from  'react-dom';
 import FloatNotes from './notes/FloatNotes';
 import NoteDiv from './notes/NoteDiv';
 import 'react-router-dom';
-
+import axios from 'axios';
 
 //import SearchPic from './searchEngine/SearchPic';
 
@@ -18,19 +18,48 @@ class wikipage extends React.Component {
     this.state = { x: 0, y: 0 };
   }
 
+  componentDidMount =async()=>{
+    try{
+      await axios.get('http://localhost:5000/notes/get/'+this.props.match.params.pageName+'/'+localStorage.userInfo)
+            .then(res => console.log(res));
+      }catch (error){
+        console.log(error);
+      }
+  }
+
   createNote = async (event) => {
 
-    console.log(event.key);
+    //console.log(event.key);
     if(event.key === '`' && localStorage.keyboardInUse !== 'yes')
     {
+      setTimeout( async()=>{
       localStorage.noteNo++;
       await ReactDOM.render(<NoteDiv/>,document.getElementById('notes'));
+
+      var notePost = {
+        pageName: this.props.match.params.pageName,
+        userName: localStorage.userInfo,
+        x: localStorage.x-20+'px',
+        y: localStorage.y-20+'px',
+        content: 'note content',
+        noteTit: 'note'
+      }
+      try{
+      await axios.post('http://localhost:5000/notes/postTip', notePost)
+            .then(res => console.log(res.data));
+      }catch (error){
+        console.log(error);
+      }
+
       ReactDOM.render(<FloatNotes x={localStorage.x-20+'px'} 
       y={localStorage.y-20+'px'} 
       content='note content'
       noteTit='note'
-      />,document.getElementById('note'+localStorage.noteNo));
+      />,document.getElementById('note'+localStorage.noteNo));  
+
+    },100);
     }
+    
   }
 
   

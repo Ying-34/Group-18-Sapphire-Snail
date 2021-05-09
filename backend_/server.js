@@ -31,6 +31,9 @@ app.use('/users', loginRouter);
 const commentsRouter = require('./routes/commentsRouter');
 app.use('/pageComments', commentsRouter);
 
+const noteRouter = require('./routes/noteRouter');
+app.use('/notes', noteRouter);
+
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
