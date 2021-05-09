@@ -8,20 +8,20 @@ import './topArticle.css'
 
 const TopArticleOpen1 = async () =>{
   localStorage.setItem("event", 'Artificial intelligence');
-  Article();
-  var win = window.open('/wikipage','_self');
+  Article('Artificial intelligence');
+  var win = window.open('/wikipage/Artificial intelligence','_self');
   win.focus();
 }
 const TopArticleOpen2 = async () =>{
   localStorage.setItem("event", 'Albert Einstein');
-  Article();
-  var win = window.open('/wikipage','_self');
+  Article('Albert Einstein');
+  var win = window.open('/wikipage/Albert Einstein','_self');
   win.focus();
 }
 const TopArticleOpen3 = async () =>{
   localStorage.setItem("event", 'Microsoft');
-  Article();
-  var win = window.open('/wikipage','_self');
+  Article('Microsoft');
+  var win = window.open('/wikipage/Microsoft','_self');
   win.focus();
 }
 
