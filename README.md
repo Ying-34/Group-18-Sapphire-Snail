@@ -39,7 +39,7 @@ Please make sure you have following software installed in your system:
 * Node.js > 6.0
 * NPM / Yarn (sometimes NPM is not working or cannot be installed properly, then you could use yarn)
 * Git
-* MongoDB
+* MongoDB Atlas cloud database
 
 To prepare this project, we need to clone the repository:<br>
     `$ git clone https://github.com/csdoris/Group-18-Sapphire-Snail`
